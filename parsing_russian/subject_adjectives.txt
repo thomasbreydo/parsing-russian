@@ -1,0 +1,18 @@
+S -> S_male
+S_male -> Subj_male Adj_phrase_male
+
+Subj_male -> Name_male | Pronoun_male
+Pronoun_male -> "он" | "ты" | "я"
+Name_male -> "томик" | "максим"
+
+Adj_phrase_male -> Mod_adj_male | Adj_phrase_male Conj Mod_adj_male
+Mod_adj_male -> Adj_mod Adj_male
+
+
+
+Adj_mod -> "слишком" | "очень" | "совсем не" |
+Conj -> "и" | "но"
+Adj_male -> "высокий" | "красивый" | "смешной"
+Pronoun_fem -> "она" | "ты" | "я"
+Pronoun_neut -> "оно"
+Pronoun_plur -> "они" | "вы" | "мы"
