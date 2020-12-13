@@ -1,8 +1,16 @@
-from nltk.parse.generate import generate
-from nltk import CFG
+from typing import TextIO
+
+from pcfg import PCFG
 import os
 
-BASEPATH = os.path.dirname(__file__)
+BASEPATH: str = os.path.dirname(__file__)
 
+f: TextIO
 with open(os.path.join(BASEPATH, "subject_adjectives.txt")) as f:
-    subject_adjectives = CFG.fromstring(f.read())
+    subject_adjectives: PCFG = PCFG.fromstring(f.read())
+
+n: int = int(input("How many sentences do you want generated? "))
+sentence: str
+for sentence in subject_adjectives.generate_sentences(n):
+    print()
+    print(sentence)
