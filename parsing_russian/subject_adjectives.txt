@@ -9,8 +9,9 @@ Name_male -> "томик" [0.5] | "максим" [0.5]
 Adj_phrase_male -> Mod_adj_male [0.8] | Adj_phrase_male Conj Mod_adj_male [0.2]
 Mod_adj_male -> Adj_mod Adj_male [1.0]
 
-
+# Adj_mod is optional
 Adj_mod -> "слишком" [0.2] | "очень" [0.2] | "совсем не" [0.2] | [0.4]
+
 Conj -> "и" [0.75] | "но" [0.25]
 Adj_male -> "высокий" [0.333] | "красивый" [0.333] | "смешной" [0.333]
 Pronoun_fem -> "она" [0.333] | "ты" [0.333] | "я" [0.333]
