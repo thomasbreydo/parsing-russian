@@ -11,6 +11,6 @@ with open(os.path.join(BASEPATH, "subject_adjectives.txt")) as f:
 
 n: int = int(input("How many sentences do you want generated? "))
 sentence: str
-for sentence in subject_adjectives.generate_sentences(n):
+for sentence in subject_adjectives.generate(n):
     print()
     print(sentence)
