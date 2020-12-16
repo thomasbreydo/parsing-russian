@@ -13,4 +13,4 @@ n: int = int(input("How many sentences do you want generated? "))
 sentence: str
 for sentence in subject_adjectives.generate(n):
     print()
-    print(sentence)
+    print(sentence.capitalize())
